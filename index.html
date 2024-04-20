@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script>
+    <title>Gerador de Tabelas MySQL</title>
+</head>
+<body>
+    <form>
+        <label for="nome">Digite o nome da tabela:</label>
+        <input type="text" name="nome" id="nomeTabela">
+        <label for="colunas">Digite o número de colunas:</label>
+        <input type="text" name="colunas" id="colunas">
+        <button onclick="Gerar()">Gerar</button>
+        <button onclick="GerarCodigo()" id="gerarCodigo" disabled>Gerar Código</button>
+    </form><br><br>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Tamanho/Valores</th>
+            <th>Nulo</th>
+            <th>Indice</th>
+            <th>Auto_Increment</th>
+        </tr>
+        <tr id="conteudo">
+            <td id="nome"></td>
+            <td id="tipo"></td>
+            <td id="tamanho"></td>
+            <td id="nulo"></td>
+            <td id="indice"></td>
+            <td id="ai"></td>
+        </tr>
+    </table><br>
+    <div id="cod"></div>
+</body>
+</html>
